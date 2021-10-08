@@ -36,7 +36,7 @@ collegedegree=$ cat $1 | cut -d , -f 3,4 | sed -E 's/,/ /g' | grep -E "16 " | cu
 
 nocollege=$ cat $1 | cut -d , -f 3,4 | sed -E 's/,/ /g' | grep -E "12 " | cut -d ' ' -f 2 | sort -n | head -n 1
 
-echo "collegedegree - nocollege" | bc
+echo "$collegedegree - $nocollege" | bc
 
 
 #I'm not sure why this is not assinging these variables. when I run the bash command
